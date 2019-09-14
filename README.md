@@ -1,3 +1,3 @@
 # ng-book-angular6
 
-## 2 - Built in directives
+## 3 - Built in directives
