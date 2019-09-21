@@ -6,6 +6,7 @@ import { NgSwitchExampleComponent } from "./ng-switch-example/ng-switch-example.
 import { NgStyleExampleComponent } from "./ng-style-example/ng-style-example.component";
 import { NgClassExampleComponent } from "./ng-class-example/ng-class-example.component";
 import { NgForExampleComponent } from "./ng-for-example/ng-for-example.component";
+import { NgNonBindableExampleComponent } from "./ng-non-bindable-example/ng-non-bindable-example.component";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { NgForExampleComponent } from "./ng-for-example/ng-for-example.component
     NgStyleExampleComponent,
     NgClassExampleComponent,
     NgForExampleComponent,
+    NgNonBindableExampleComponent,
   ],
   imports: [
     BrowserModule
