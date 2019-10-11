@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { IntroComponent } from "./intro/intro.component";
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { SidebarItemComponent } from "./sidebar/sidebar-item.component";
+import { DemoFormSkuComponent } from "./demo-form-sku/demo-form-sku.component";
 
 import { ExampleDef } from "./example.model";
 
@@ -21,10 +22,12 @@ import { ExampleDef } from "./example.model";
  */
 export const examples: ExampleDef[] = [
   {label: 'Intro', name: 'Root', path: '', component: IntroComponent},
+  {label: 'Sku', name: 'DemoFormSku', path: 'sku', component: DemoFormSkuComponent},
 ];
 
 const routes: Routes = [
   { path: '', component: IntroComponent, pathMatch: 'full' },
+  { path: 'sku', component: DemoFormSkuComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -33,6 +36,7 @@ const routes: Routes = [
     IntroComponent,
     SidebarComponent,
     SidebarItemComponent,
+    DemoFormSkuComponent,
   ],
   imports: [
     BrowserModule,
