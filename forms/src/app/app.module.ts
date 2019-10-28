@@ -15,6 +15,7 @@ import { SidebarComponent } from "./sidebar/sidebar.component";
 import { SidebarItemComponent } from "./sidebar/sidebar-item.component";
 import { DemoFormSkuComponent } from "./demo-form-sku/demo-form-sku.component";
 import { DemoFormSkuWithBuilderComponent } from "./demo-form-sku-wih-builder/demo-form-sku-with-builder.component";
+import { DemoFormWithValidationsExplicitComponent } from "./demo-form-with-validations-explicit/demo-form-with-validations-explicit.component";
 
 import { ExampleDef } from "./example.model";
 
@@ -24,13 +25,15 @@ import { ExampleDef } from "./example.model";
 export const examples: ExampleDef[] = [
   {label: 'Intro', name: 'Root', path: '', component: IntroComponent},
   {label: 'Sku', name: 'DemoFormSku', path: 'sku', component: DemoFormSkuComponent},
-  {label: 'Sku (with Builder)', name: 'DemoFormSkuWithBuilder', path: 'sku-builder', component: DemoFormSkuWithBuilderComponent}
+  {label: 'Sku (with Builder)', name: 'DemoFormSkuWithBuilder', path: 'sku-builder', component: DemoFormSkuWithBuilderComponent},
+  {label: 'Validation Explicit', name: 'DemoFormValidationsExplicit', path: 'validations-explicit', component: DemoFormWithValidationsExplicitComponent},
 ];
 
 const routes: Routes = [
   { path: '', component: IntroComponent, pathMatch: 'full' },
   { path: 'sku', component: DemoFormSkuComponent, pathMatch: 'full' },
   { path: 'sku-builder', component: DemoFormSkuWithBuilderComponent, pathMatch: 'full'},
+  { path: 'validations-explicit', component: DemoFormWithValidationsExplicitComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -41,6 +44,7 @@ const routes: Routes = [
     SidebarItemComponent,
     DemoFormSkuComponent,
     DemoFormSkuWithBuilderComponent,
+    DemoFormWithValidationsExplicitComponent,
   ],
   imports: [
     BrowserModule,
