@@ -17,6 +17,7 @@ import { DemoFormSkuComponent } from "./demo-form-sku/demo-form-sku.component";
 import { DemoFormSkuWithBuilderComponent } from "./demo-form-sku-wih-builder/demo-form-sku-with-builder.component";
 import { DemoFormWithValidationsExplicitComponent } from "./demo-form-with-validations-explicit/demo-form-with-validations-explicit.component";
 import { DemoFormWithValidationsShorthandComponent } from "./demo-form-with-validations-shorthand/demo-form-with-validations-shorthand.component";
+import { DemoFormWithCustomValidationComponent } from "./demo-form-with-custom-validation/demo-form-with-custom-validation.component";
 
 import { ExampleDef } from "./example.model";
 
@@ -29,6 +30,7 @@ export const examples: ExampleDef[] = [
   {label: 'Sku (with Builder)', name: 'DemoFormSkuWithBuilder', path: 'sku-builder', component: DemoFormSkuWithBuilderComponent},
   {label: 'Validation Explicit', name: 'DemoFormValidationsExplicit', path: 'validations-explicit', component: DemoFormWithValidationsExplicitComponent},
   {label: 'Validation Shorthand', name: 'DemoFormValidationsShorthand', path: 'validations-shorthand', component: DemoFormWithValidationsShorthandComponent},
+  {label: 'Custom Validation', name: 'DemoFormWithCustomValidation', path: 'custom-validation', component: DemoFormWithCustomValidationComponent},
 ];
 
 const routes: Routes = [
@@ -37,6 +39,7 @@ const routes: Routes = [
   { path: 'sku-builder', component: DemoFormSkuWithBuilderComponent, pathMatch: 'full'},
   { path: 'validations-explicit', component: DemoFormWithValidationsExplicitComponent, pathMatch: 'full' },
   { path: 'validations-shorthand', component: DemoFormWithValidationsShorthandComponent, pathMatch: 'full' },
+  { path: 'custom-validation', component: DemoFormWithCustomValidationComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -49,6 +52,7 @@ const routes: Routes = [
     DemoFormSkuWithBuilderComponent,
     DemoFormWithValidationsExplicitComponent,
     DemoFormWithValidationsShorthandComponent,
+    DemoFormWithCustomValidationComponent,
   ],
   imports: [
     BrowserModule,
