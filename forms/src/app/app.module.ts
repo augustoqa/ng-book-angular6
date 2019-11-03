@@ -18,6 +18,7 @@ import { DemoFormSkuWithBuilderComponent } from "./demo-form-sku-wih-builder/dem
 import { DemoFormWithValidationsExplicitComponent } from "./demo-form-with-validations-explicit/demo-form-with-validations-explicit.component";
 import { DemoFormWithValidationsShorthandComponent } from "./demo-form-with-validations-shorthand/demo-form-with-validations-shorthand.component";
 import { DemoFormWithCustomValidationComponent } from "./demo-form-with-custom-validation/demo-form-with-custom-validation.component";
+import { DemoFormWithEventsComponent } from "./demo-form-with-events/demo-form-with-events.component";
 
 import { ExampleDef } from "./example.model";
 
@@ -31,6 +32,7 @@ export const examples: ExampleDef[] = [
   {label: 'Validation Explicit', name: 'DemoFormValidationsExplicit', path: 'validations-explicit', component: DemoFormWithValidationsExplicitComponent},
   {label: 'Validation Shorthand', name: 'DemoFormValidationsShorthand', path: 'validations-shorthand', component: DemoFormWithValidationsShorthandComponent},
   {label: 'Custom Validation', name: 'DemoFormWithCustomValidation', path: 'custom-validation', component: DemoFormWithCustomValidationComponent},
+  {label: 'Events', name: 'DemoFormWithEvents', path: 'events', component: DemoFormWithEventsComponent},
 ];
 
 const routes: Routes = [
@@ -40,6 +42,7 @@ const routes: Routes = [
   { path: 'validations-explicit', component: DemoFormWithValidationsExplicitComponent, pathMatch: 'full' },
   { path: 'validations-shorthand', component: DemoFormWithValidationsShorthandComponent, pathMatch: 'full' },
   { path: 'custom-validation', component: DemoFormWithCustomValidationComponent, pathMatch: 'full' },
+  { path: 'events', component: DemoFormWithEventsComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -53,6 +56,7 @@ const routes: Routes = [
     DemoFormWithValidationsExplicitComponent,
     DemoFormWithValidationsShorthandComponent,
     DemoFormWithCustomValidationComponent,
+    DemoFormWithEventsComponent,
   ],
   imports: [
     BrowserModule,
