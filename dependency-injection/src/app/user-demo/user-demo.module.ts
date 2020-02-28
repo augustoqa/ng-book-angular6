@@ -9,7 +9,7 @@ import { UserService } from "../services/user.service";
         CommonModule
     ],
     providers: [
-        UserService // <-- added right here
+        { provide: UserService, useClass: UserService }
     ],
     declarations: []
 })

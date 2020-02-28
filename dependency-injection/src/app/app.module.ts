@@ -22,6 +22,7 @@ import { UserDemoMudule } from "./user-demo/user-demo.module";
 
 import { ExampleDef } from './example.model';
 import { UserDemoInjectorComponent } from './user-demo/user-demo.injector.component';
+import { UserDemoComponent } from './user-demo/user-demo.component';
 
 /*
  * Here's the master list of our examples for this chapter.
@@ -29,11 +30,13 @@ import { UserDemoInjectorComponent } from './user-demo/user-demo.injector.compon
 export const examples: ExampleDef[] = [
 	{ label: 'Intro', name: 'Root', path: '', component: IntroComponent },
 	{ label: 'Injector', name: 'Injector', path: 'injector', component: UserDemoInjectorComponent },
+	{ label: 'useClass (UserService)', name: 'UseClass', path: 'use-class', component: UserDemoComponent },
 ];
 
 const routes: Routes = [
 	{ path: '', component: IntroComponent, pathMatch: 'full' },
 	{ path: 'injector', component: UserDemoInjectorComponent, pathMatch: 'full' },
+	{ path: 'use-class', component: UserDemoComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -43,6 +46,7 @@ const routes: Routes = [
 		SidebarComponent,
 		SidebarItemComponent,
 		UserDemoInjectorComponent,
+		UserDemoComponent,
 	],
 	imports: [
 		BrowserModule,
