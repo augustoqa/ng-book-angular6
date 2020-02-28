@@ -18,17 +18,22 @@ import { IntroComponent } from './intro/intro.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarItemComponent } from './sidebar/sidebar-item.component';
 
+import { UserDemoMudule } from "./user-demo/user-demo.module";
+
 import { ExampleDef } from './example.model';
+import { UserDemoInjectorComponent } from './user-demo/user-demo.injector.component';
 
 /*
  * Here's the master list of our examples for this chapter.
  */
 export const examples: ExampleDef[] = [
 	{ label: 'Intro', name: 'Root', path: '', component: IntroComponent },
+	{ label: 'Injector', name: 'Injector', path: 'injector', component: UserDemoInjectorComponent },
 ];
 
 const routes: Routes = [
 	{ path: '', component: IntroComponent, pathMatch: 'full' },
+	{ path: 'injector', component: UserDemoInjectorComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -37,6 +42,7 @@ const routes: Routes = [
 		IntroComponent,
 		SidebarComponent,
 		SidebarItemComponent,
+		UserDemoInjectorComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -44,7 +50,7 @@ const routes: Routes = [
 		HttpModule,
 		RouterModule.forRoot(routes),
 
-
+		UserDemoMudule,
 	],
 	providers: [
 		{ provide: APP_BASE_HREF, useValue: '/' },
